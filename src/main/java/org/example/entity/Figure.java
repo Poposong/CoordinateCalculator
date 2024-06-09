@@ -6,6 +6,15 @@ public interface Figure{
     double Calculator();
 
     // 도형을 만들 수 있는 지 확인한다.
-    boolean isPossible();
+    default boolean isPossible(Points points, int size){
+        if(points == null){
+            return false;
+        }
+
+        if (points.getPointsSize() == size) {
+            return true;
+        }
+        return false;
+    }
 
 }

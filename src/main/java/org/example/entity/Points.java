@@ -25,4 +25,5 @@ public class Points{
     public int getPointsSize(){
         return this.points.size();
     }
+
 }
