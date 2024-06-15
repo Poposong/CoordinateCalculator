@@ -6,7 +6,6 @@ import java.util.List;
  * 선 길이
  */
 public class Line implements Figure {
-    private static final int size = 2;
     private Points points;
 
     public Line(Points points) {

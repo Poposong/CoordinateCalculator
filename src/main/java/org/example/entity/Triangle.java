@@ -4,7 +4,6 @@ package org.example.entity;
  * 삼각형
  */
 public class Triangle implements Figure {
-    private static final int size = 3;
     private Points points;
 
     public Triangle(Points points) {

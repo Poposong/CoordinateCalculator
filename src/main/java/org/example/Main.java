@@ -15,12 +15,10 @@ public class Main {
     private static final InputView inputView = new InputView();
     private static final ResultView resultView = new ResultView();
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
         while(true){
             inputView.displayCoordinatePrompt();
-            String[] userAnswer = inputView.inputCoordinates();
-            Points points = inputView.strToPoints(userAnswer);
-            System.out.println(Size.Line);
+            Points points = inputView.userInput();
             if(points.getPointsSize() == Size.Line.getSize()){
                 // NOTE: 라인
                 Line line = new Line(points);

@@ -4,7 +4,6 @@ package org.example.entity;
  * 사각형
  * */
 public class Square implements Figure{
-    private static final int size = 4;
     private Points points;
 
     public Square(Points points) {

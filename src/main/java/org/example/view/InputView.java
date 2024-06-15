@@ -14,6 +14,11 @@ public class InputView {
         System.out.println("좌표를 입력하세요.");
     }
 
+    public Points userInput() throws Exception {
+        String[] userAnswer = inputCoordinates();
+        return strToPoints(userAnswer);
+    }
+
     public String[] inputCoordinates() throws IOException {
         return br.readLine().split("-");
     }
@@ -37,9 +42,9 @@ public class InputView {
         System.out.println("계속 게임을 진행하시겠어요?(Y/N)");
         while(true){
             String answer = br.readLine();
-            if(answer.equals("Y")){
+            if("Y".equals(answer)){
                 return true;
-            }else if(answer.equals("N")){
+            }else if("N".equals(answer)){
                 return false;
             }else{
                 System.out.println("Y 또는 N으로 대답해주세요.");
